@@ -1,0 +1,33 @@
+:root {
+    --heading-color: rgb(159, 165, 245);
+    --heading-font: Georgia, 'Times New Roman', Times, serif;
+    --text-color: rgb(245, 191, 140);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 25px;
+    margin: 15px;
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+}
+
+img {
+    margin: 0px 0px 15px 15px;
+}
+
+li {
+    margin-left: 30px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
