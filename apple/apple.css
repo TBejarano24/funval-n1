@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+main {
+    position: relative;
+}
+
+#navigationbar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(240, 240, 240);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+#heroimg {
+    width: 100%;
+    height: auto;
+}
+
+#herotitle {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    inset: 0;
+    margin: auto;
+}
