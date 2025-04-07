@@ -8,24 +8,34 @@
   
   <title>Frontend Mentor | Social links profile</title>
 
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
-
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
+<body class="bg-[#151515] flex flex-col justify-center items-center h-screen">
+  <main class="bg-[#1f1f1f] w-80 rounded-xl my-52">
+    <section class="flex flex-col justify-center items-center">
+      <img class="w-20 rounded-full m-5" src="./assets/images/avatar-jessica.jpeg" alt="profile picture">
+      <h1 class="text-[#fff] text-[28px] font-[Inter] font-semibold">Jessica Randall</h1>
+      <p class="text-[#c4f82a] mb-5 font-semibold">London, United Kingdom</p>
+      <p class="text-[#fff] mb-4">"Front-end developer and avid reader"</p>
+    </section>
+    <section class="flex flex-col justify-center items-center gap-4 font-[Inter] font-semibold">
+      <a class="text-[#fff] w-[85%] h-14 bg-[#333] rounded-xl flex justify-center items-center" href="">GitHub</a>
+      <a class="text-[#fff] w-[85%] h-14 bg-[#333] rounded-xl flex justify-center items-center" href="">Frontend Mentor</a>
+      <a class="text-[#fff] w-[85%] h-14 bg-[#333] rounded-xl flex justify-center items-center" href="">LinkedIn</a>
+      <a class="text-[#fff] w-[85%] h-14 bg-[#333] rounded-xl flex justify-center items-center" href="">Twitter</a>
+      <a class="text-[#fff] w-[85%] h-14 bg-[#333] rounded-xl flex justify-center items-center mb-5" href="">Instagram</a>
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
