@@ -1,81 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./results.css" rel="stylesheet" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body class="md:flex">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <section class="bg-linear-to-b from-[#7857ff] to-[#2e2be9] to-70% text-white flex flex-col justify-evenly items-center font-['Hanken_Grotesk'] rounded-b-3xl h-[420px]">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="md:flex">
+    <section
+      class="bg-linear-to-b from-[#7857ff] to-[#2e2be9] to-70% text-white flex flex-col justify-evenly items-center font-['Hanken_Grotesk'] rounded-b-3xl h-[420px]"
+    >
+      <h1 class="text-xl font-medium tracking-widest">Your Result</h1>
 
-    <h1 class="text-xl font-medium tracking-widest">Your Result</h1>
+      <div
+        class="bg-linear-to-b from-[#4e21ca] to-[#3732eb] to-90% flex flex-col justify-center items-center py-10 px-12 rounded-full"
+      >
+        <span class="text-7xl font-semibold">76</span>
+        <span class="font-extralight tracking-wider">of 100</span>
+      </div>
 
-    <div class="bg-linear-to-b from-[#4e21ca] to-[#3732eb] to-90% flex flex-col justify-center items-center py-10 px-12 rounded-full">
+      <h2 class="text-4xl font-semibold">Great</h2>
+      <p class="text-center max-w-72 font-light mb-5 tracking-wide">
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
+    </section>
 
-      <span class="text-7xl font-semibold">76</span>
-      <span class="font-extralight tracking-wider">of 100</span>
+    <section>
+      <h2 class="mx-6 mt-5 font-semibold">Summary</h2>
 
+      <div class="flex flex-col justify-evenly items-center h-80">
+        <div class="flex justify-between w-[90%] bg-[#fff6f7] p-3 rounded-xl">
+          <img
+            class="mr-2"
+            src="./assets/images/icon-reaction.svg"
+            alt="reaction icon"
+          />
+          <span class="mr-40 text-[#ff5757] font-semibold">Reaction</span>
+          <span class="font-semibold">80</span>
+          <span class="text-[#c8c7ff] font-semibold">/ 100</span>
+        </div>
+
+        <div class="flex justify-between w-[90%] bg-[#fffaf4] p-3 rounded-xl">
+          <img
+            class="mr-2"
+            src="./assets/images/icon-memory.svg"
+            alt="memory icon"
+          />
+          <span class="mr-40 text-[#ffb01f] font-semibold">Memory</span>
+          <span class="font-semibold">92</span>
+          <span class="text-[#c8c7ff] font-semibold">/ 100</span>
+        </div>
+
+        <div class="flex justify-between w-[90%] bg-[#f2fdf9] p-3 rounded-xl">
+          <img
+            class="mr-2"
+            src="./assets/images/icon-verbal.svg"
+            alt="verbal icon"
+          />
+          <span class="mr-40 text-[#00bd91] font-semibold">Verbal</span>
+          <span class="font-semibold">61</span>
+          <span class="text-[#c8c7ff] font-semibold">/ 100</span>
+        </div>
+
+        <div class="flex justify-between w-[90%] bg-[#f4f4fe] p-3 rounded-xl">
+          <img
+            class="mr-2"
+            src="./assets/images/icon-visual.svg"
+            alt="visual icon"
+          />
+          <span class="mr-40 text-[#1125d4] font-semibold">Visual</span>
+          <span class="font-semibold">72</span>
+          <span class="text-[#c8c7ff] font-semibold">/ 100</span>
+        </div>
+
+        <a
+          class="text-white bg-[#303b5a] py-3 px-34 rounded-3xl font-semibold"
+          href=""
+          >Continue</a
+        >
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Tomas Bejarano</a>.
     </div>
-
-    <h2 class="text-4xl font-semibold">Great</h2>
-    <p class="text-center max-w-72 font-light mb-5 tracking-wide">You scored higher than 65% of the people who have taken these tests.</p>
-
-  </section>
-
-  <section>
-
-    <h2 class="mx-6 mt-5 font-semibold">Summary</h2>
-
-    <div class="flex flex-col justify-evenly items-center h-80">
-
-      <div class="flex justify-between w-[90%] bg-[#fff6f7] p-3 rounded-xl">
-        <img class="mr-2" src="./assets/images/icon-reaction.svg" alt="reaction icon">
-        <span class="mr-40 text-[#ff5757] font-semibold">Reaction</span>
-        <span class="font-semibold">80</span> <span class="text-[#c8c7ff] font-semibold">/ 100</span>
-      </div>
-
-      <div class="flex justify-between w-[90%] bg-[#fffaf4] p-3 rounded-xl">
-        <img class="mr-2" src="./assets/images/icon-memory.svg" alt="memory icon">
-        <span class="mr-40 text-[#ffb01f] font-semibold">Memory</span>
-        <span class="font-semibold">92</span> <span class="text-[#c8c7ff] font-semibold">/ 100</span>
-      </div>
-
-      <div class="flex justify-between w-[90%] bg-[#f2fdf9] p-3 rounded-xl">
-        <img class="mr-2" src="./assets/images/icon-verbal.svg" alt="verbal icon">
-        <span class="mr-40 text-[#00bd91] font-semibold">Verbal</span>
-        <span class="font-semibold">61</span> <span class="text-[#c8c7ff] font-semibold">/ 100</span>
-      </div>
-      
-      <div class="flex justify-between w-[90%] bg-[#f4f4fe] p-3 rounded-xl">
-        <img class="mr-2" src="./assets/images/icon-visual.svg" alt="visual icon">
-        <span class="mr-40 text-[#1125d4] font-semibold">Visual</span>
-        <span class="font-semibold">72</span> <span class="text-[#c8c7ff] font-semibold">/ 100</span>
-      </div>
-
-      <a class="text-white bg-[#303b5a] py-3 px-34 rounded-3xl font-semibold" href="">Continue</a>
-    </div>
-
-  </section>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Tomas Bejarano</a>.
-  </div>
-</body>
+  </body>
 </html>
