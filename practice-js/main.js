@@ -72,19 +72,100 @@
 // } else {
 //   alert("Ese no es un número");
 // }
-let nota = parseFloat(prompt("¿Cuál fue su nota?"));
-if (!isNaN(nota)) {
-  if (nota >= 0 && nota <= 10) {
-    alert("Desaprobado");
-  } else if (nota >= 11 && nota <= 13) {
-    alert("Regular");
-  } else if (nota >= 14 && nota <= 17) {
-    alert("Bueno");
-  } else if (nota >= 18 && nota <= 20) {
-    alert("Excelente");
-  } else {
-    alert("Nota inválida");
+// let nota = 0;
+
+// while (true) {
+//   nota = parseFloat(prompt("¿Cuál fue su nota?"));
+//   if (!isNaN(nota)) {
+//     if (nota >= 0 && nota <= 10) {
+//       alert("Desaprobado");
+//       break;
+//     } else if (nota > 10 && nota <= 13) {
+//       alert("Regular");
+//       break;
+//     } else if (nota > 13 && nota <= 17) {
+//       alert("Bueno");
+//       break;
+//     } else if (nota > 17 && nota <= 20) {
+//       alert("Excelente");
+//       break;
+//     } else {
+//       alert("Nota inválida");
+//     }
+//   } else {
+//     alert("Nota inválida");
+//   }
+// }
+// let number = null;
+// while (true) {
+//   number = parseInt(prompt("Ingrese el número cuya tabla desea ver"));
+//   if (!isNaN(number)) {
+//     for (let i = 1; i < 11; i++) {
+//       numberDisplay = number * i;
+//       console.log(number + " X " + i + " = " + numberDisplay);
+//     }
+//     break;
+//   } else {
+//     alert("Elemento inválido");
+//   }
+// }
+// let num = 0;
+// for (let i = 1; i <= 100; i++) {
+//   num += i;
+//   console.log(num);
+// }
+let figura = 0;
+let lado = 0;
+let base = 0;
+let altura = 0;
+let area = 0;
+alert("Bienvenid@ al programa de calculadora de área");
+do {
+  figura = parseInt(
+    prompt(
+      "¿De qué figura desea conocer el área?\n1 - Cuadrado\n2 - Rectángulo\n3 - Triángulo"
+    )
+  );
+  switch (figura) {
+    case 1:
+      do {
+        lado = parseFloat(prompt("¿Cuánto mide cada lado del cuadrado?"));
+        if (!isNaN(lado)) {
+          area = lado ** 2;
+          alert("El área del cuadrado es " + area);
+          break;
+        } else {
+          alert("Valor inválido");
+        }
+      } while (isNaN(lado));
+      break;
+    case 2:
+      do {
+        base = parseFloat(prompt("¿Cuánto mide la base del rectángulo?"));
+        altura = parseFloat(prompt("¿Cuál es la altura del rectángulo?"));
+        if (!isNaN(base) && !isNaN(altura)) {
+          area = base * altura;
+          alert("El área del rectángulo es " + area);
+          break;
+        } else {
+          alert("Valor inválido");
+        }
+      } while (isNaN(base) || isNaN(altura));
+      break;
+    case 3:
+      do {
+        base = parseFloat(prompt("¿Cuánto mide la base del triángulo?"));
+        altura = parseFloat(prompt("¿Cuál es la altura del triángulo?"));
+        if (!isNaN(base) && !isNaN(altura)) {
+          area = base * altura;
+          alert("El área del triángulo es " + area);
+          break;
+        } else {
+          alert("Valor inválido");
+        }
+      } while (isNaN(base) || isNaN(altura));
+      break;
+    default:
+      alert("Valor inválido");
   }
-} else {
-  alert("Nota inválida");
-}
+} while (isNaN(figura));
