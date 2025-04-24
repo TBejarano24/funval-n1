@@ -67,3 +67,5 @@ function retirarDinero() {
 function consultarSaldo() {
   alert("El saldo disponible en su cuenta es de $" + saldoDisponible);
 }
+
+cuentaBancaria();
