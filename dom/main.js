@@ -44,15 +44,15 @@ const auto = {
   },
 };
 
-let datosAuto = auto.map((x) => x.keys);
-console.log(datosAuto);
+let datosAuto = document.querySelector("#fichaTecnica");
 
-let tabla = document.getElementById("fichaTecnica");
-tabla.innerHTML = `
-<tr>
-    <th colspan="2">Información General</th>
-</tr>
-<tr>
-    <th>${a}</th>
-</tr>
-`;
+for (const [clave, valor] of Object.entries(auto).slice(0, 11)) {
+  datosAuto.innerHTML += `
+  <tr class="border text-center">
+    <td class="border">${clave}</td>
+    <td class="border">${
+      typeof valor == "object" ? Object.values(valor) : valor
+    }</td>
+  </tr>
+  `;
+}
