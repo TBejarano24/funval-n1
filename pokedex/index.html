@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex!</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+    <main>
+        <!-- HEADER -->
+        <header class="flex flex-col justify-center items-center w-full bg-[#ffcc33]">
+            <div id="title">POKEDEX</div>
+            <div id="typesButtons" class="flex justify-around w-full">
+                <button>FUEGO</button>
+                <button>AGUA</button>
+                <button>PLANTA</button>
+                <button>ELECTRICO</button>
+                <button>FANTASMA</button>
+                <button>VENENO</button>
+            </div>
+        </header>
+        <!-- CONTENEDOR DE CARDS -->
+        <section id="cardContainer" class="grid grid-cols-3 grid-rows-2 w-full h-min-[50%] h-screen bg-[#fff27c]">
+
+        </section>
+
+    </main>
+    <!-- CONTENEDOR DE BOTONES NEXT Y PREV -->
+    <div id="buttonNext" class="flex justify-end bg-[#ffcc33]">
+        <button class="bg-blue-500 text-white p-2 px-4 rounded-sm">NEXT</button>
+    </div>
+</body>
+
+</html>

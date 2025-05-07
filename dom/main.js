@@ -47,12 +47,53 @@ const auto = {
 let datosAuto = document.querySelector("#fichaTecnica");
 
 for (const [clave, valor] of Object.entries(auto).slice(0, 11)) {
-  datosAuto.innerHTML += `
+  if (clave === "especificaciones") {
+    console.log(`Clave: ${clave} - Valor: Acá se pone fea la cosa`);
+  } else {
+    console.log(`Clave: ${clave} - Valor: ${valor}`);
+  }
+}
+
+for (const seccion in auto.especificaciones) {
+  console.log(`${seccion}`);
+  for (const clave in auto.especificaciones[seccion]) {
+    console.log(`${clave}: ${auto.especificaciones[seccion][clave]}`);
+  }
+}
+
+for (const [clave, valor] of Object.entries(auto).slice(0, 11)) {
+  if (clave === "especificaciones") {
+    datosAuto.innerHTML += `
   <tr class="border text-center">
-    <td class="border">${clave}</td>
+    <th class="border" scope="row" rowspan="4">${clave}</th>
+  </tr>
+    `;
+    for (seccion in auto.especificaciones) {
+      datosAuto.innerHTML += `
+    <tr class="border text-center">
+      <th class="border especificacionesSeccion" scope="row">${seccion}</th>
+    </tr>
+      `;
+      let especificacionesSeccion = document.querySelectorAll(
+        ".especificacionesSeccion"
+      );
+      let contador = 0;
+      //Sacar el bucle for para evitar que todos los subelementos terminen en motor. para cuando se entra en el bucle sólo existe una subsección!!!
+      for (subseccion in auto.especificaciones[seccion]) {
+        especificacionesSeccion[contador].innerHTML += `
+        <td>${subseccion}: ${auto.especificaciones[seccion][subseccion]}</td>
+        `;
+        contador++;
+      }
+    }
+  } else {
+    datosAuto.innerHTML += `
+  <tr class="border text-center">
+    <th class="border">${clave}</th>
     <td class="border">${
       typeof valor == "object" ? Object.values(valor) : valor
     }</td>
   </tr>
   `;
+  }
 }
